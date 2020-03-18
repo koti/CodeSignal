@@ -1,14 +1,7 @@
 def allLongestStrings(inputArray):
-    '''max = max(inputArray, key=len)'''
-    max = 0
-    for i in range(len(inputArray)):
-        if(len(inputArray[i])) > max:
-            max = len(inputArray[i])
-        else:
-            pass
-
+    largest = len(max(inputArray, key=len))
     temp = []
     for j in range(len(inputArray)):
-        if len(inputArray[j]) == max:
+        if len(inputArray[j]) == largest:
             temp.append(inputArray[j])
     return temp
